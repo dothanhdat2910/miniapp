@@ -87,3 +87,82 @@ button:hover {
   margin: 20px auto;
   max-width: 100%;
 }
+/* 1. Responsive body padding */
+body {
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+/* 2. Đảm bảo form không bị tràn hoặc che mất */
+form {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem; /* Thêm khoảng trống dưới cùng */
+}
+
+/* 3. Tối ưu textarea và nút gửi cho mobile */
+textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  resize: none;
+}
+
+button[type="submit"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* 4. Responsive ảnh và đoạn văn */
+.photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+h1, h3, p {
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+
+/* 5. Ngăn các phần tử cố định che nội dung */
+#fireworksCanvas {
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 6. Responsive cho màn hình nhỏ */
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  h1, h3, p {
+    font-size: 1rem;
+  }
+
+  textarea {
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+}
